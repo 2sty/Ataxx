@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Ataxx</title>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="libs/three.js"></script>
+    <script src="js/Board.js"></script>
+    <script src="js/LevelData.js"></script>
+    <script src="js/Pawn.js"></script> 
+    <script src="js/Net.js"></script>
+    <script src="js/Light.js"></script>
+    <script src="js/Fire.js"></script>
+    <script src="js/MainGame.js"></script>
+   
+    <link href="style.css" rel="stylesheet" />
+    <script>
+        var board;
+        var maingame;
+        var pawn;
+        var light
+        var fire;
+        var level;
+        
+        
+        window.addEventListener("load", function () {
+            board = new Board();
+            maingame = new MainGame();
+            pawn = new Pawn();
+            light = new Light();
+            net = new Net();
+            fire = new Fire();
+            level = new LevelData();
+        })
+    </script>
+</head>
+
+<body>
+    <div id="scene"></div>
+   
+        <img id="pionz" src="mats/pionz.png" alt="nic" />
+        <div id="zegar"></div>
+    <div id="zegar2"></div>
+    <img id="pionc" src="mats/pionc.png" alt="nic" />
+         <div id="kom">
+        <h1 id="komunikat">Wpisz swoją nazwę</h1>
+        <h1 id="move"></h1>
+    </div>    
+    <div class="hidden" id="waitOverlay">
+        <div id="wait__content">
+            <img id="loading" src="http://www.mytreedb.com/uploads/mytreedb/loader/ajax_loader_gray_512.gif" />
+        </div>
+    </div>
+    <img src="mats/history.png" id="pokabaze" alet="lol"/>
+    <div id="base">
+        <div id="title">Historia użytkowników:</div>
+        <div id="history"></div>
+    </div>
+        <div id="start">
+            <div id="back"></div>
+            <div id="front">
+
+                <div id="log">
+                    <div id="name">AtaXX</div>
+                    <input id="username" type="text" />
+                    <div id="lower">
+                        <input class="akcja" id="logowanie" type="button" value="Wejdź do gry" />
+                        <div id="reset">Resetuj użytkowników</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="ruch"></div>
+        <div id="przegrana">
+            <div id="przegrananapis"></div>
+            <div id="resetprzeg">Od nowa!</div>
+        </div>
+        <div id="nick"></div>
+</body>
+</html>
